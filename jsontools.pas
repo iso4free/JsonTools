@@ -971,6 +971,7 @@ begin
   N := Child(Index);
   if N <> nil then
   begin
+    N.Free;
     FList.Delete(Index);
     if FList.Count = 0 then
     begin
@@ -987,6 +988,7 @@ begin
   N := Child(Name);
   if N <> nil then
   begin
+    N.Free;
     FList.Remove(N);
     if FList.Count = 0 then
     begin
